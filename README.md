@@ -1,12 +1,6 @@
 # Terraform AWS SNS Topic Module
 
-A reusable Terraform module to create and manage **AWS SNS Topics** (Standard or FIFO), with support for:
-- Encryption using KMS
-- Custom delivery & access policies
-- Subscription management (email, SQS, Lambda, etc.)
-- Feedback roles for metrics
-- Tags and naming
-- Fine-grained configuration
+This module provides a reusable and configurable way to create and manage AWS SNS (Simple Notification Service) topics using Terraform. It supports both Standard and FIFO topics, KMS encryption, subscription management across various protocols (like Email, Lambda, SQS), and optional feedback roles for detailed delivery metrics.
 
 ---
 
@@ -33,8 +27,7 @@ ___
 ##  Architecture
 
 
-> This module supports **single-region SNS topics** (Standard or FIFO).  
-> It handles advanced topic attributes, IAM roles for feedback, and flexible subscriptions.
+![SNS](https://github.com/user-attachments/assets/88c53563-5503-41d4-81aa-b6e9d21a4d94)# Terraform AWS SNS Topic Module
 
 ---
 
