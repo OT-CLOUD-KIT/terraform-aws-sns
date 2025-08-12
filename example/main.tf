@@ -21,7 +21,7 @@ module "naming" {
 
 
 module "sns_topic" {
-  source = "../"
+  source = "git@github.com:OT-CLOUD-KIT/terraform-aws-sns.git?ref=Feature"
 
   sns_topic_name                         = var.sns_topic_name
   sns_display_name                       = var.sns_display_name
