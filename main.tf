@@ -27,17 +27,13 @@ name = var.fifo_enabled ? "${local.base_name}-${var.sns_topic_name}.fifo" : "${l
   lambda_failure_feedback_role_arn        = var.lambda_feedback_enabled ? aws_iam_role.iam_failed_feedback_role.arn : null
   lambda_success_feedback_sample_rate     = var.lambda_feedback_enabled ? var.lambda_success_feedback_sample_rate : 0
 
-  # tags = merge({
-  #   Name        = var.sns_topic_name
-  #   PROVISIONER = "Terraform"
-  # }, var.sns_topic_tags)
+ 
 
   tags = merge(
   {
     Name = var.fifo_enabled ? "${local.base_name}-${var.sns_topic_name}.fifo" : "${local.base_name}-${var.sns_topic_name}"
   },
   local.common_tags,
-  var.sns_topic_tags
 )
 
 }

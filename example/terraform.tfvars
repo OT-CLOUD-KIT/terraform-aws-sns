@@ -112,12 +112,7 @@ snssuccessfeedbackpolicy = "sns-success-feedback"
 
 # Subscriptions (optional — empty now)
 sns_subscription_setting = {
-  # Example if needed:
-  # "sub-sqs" = {
-  #   protocol             = "sqs"
-  #   endpoint             = "arn:aws:sqs:us-east-1:123456789012:dev-queue"
-  #   raw_message_delivery = true
-  # }
+
 }
 
 # Other configs
@@ -126,27 +121,9 @@ confirmation_timeout_in_minutes = 1
 filter_policy                    = null
 delivery_policy                  = null
 
-# Tags
-sns_topic_tags = {
-  Environment = "dev"
-  Owner       = "Nikita"
-}
 
 
-random_alphanumeric_len = 4
-
-bu       = "ot"
-app      = "bp"
-env      = "d"
-resource = "SNS"
-tenant   = ""
-
-special = false
-upper   = false
-number  = true
-
-gen_no_of_names = 1
-
-team    = "infra"
-program = "ot"
+env = "dev"
+owner = "opstree"
+app = "otcloud-kit"
 

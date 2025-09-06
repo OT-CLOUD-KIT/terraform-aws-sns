@@ -1,24 +1,3 @@
-module "standard_tags" {
-  source = "git@github.com:OT-CLOUD-KIT/terraform-aws-standard-tagging.git?ref=dev"
-
-  bu      = var.bu
-  program = var.program
-  app     = var.app
-  team    = var.team
-  region  = var.region
-  env     = var.env
-}
-
-module "naming" {
-  source   = "git@github.com:OT-CLOUD-KIT/terraform-aws-naming.git?ref=dev"
-  bu       = var.bu
-  env      = var.env
-  app      = var.app
-  resource = var.resource
-}
-
-
-
 
 module "sns_topic" {
   source = "git@github.com:OT-CLOUD-KIT/terraform-aws-sns.git?ref=Feature"
@@ -31,13 +10,9 @@ module "sns_topic" {
   sns_kms_master_key_id                  = var.sns_kms_master_key_id
   sns_delivery_policy                    = var.sns_delivery_policy
   sns_access_policy                      = var.sns_access_policy
-  sns_topic_tags                         = var.sns_topic_tags
-  bu      = var.bu
-  program = var.program
-  app     = var.app
-  env     = var.env
-  team    = var.team
-  region  = var.region
+  env = var.env
+  owner = var.owner
+  app = var.app
 
   http_feedback_enabled                  = var.http_feedback_enabled
   sqs_feedback_enabled                   = var.sqs_feedback_enabled
